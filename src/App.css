@@ -1,0 +1,127 @@
+#root {
+  /*max-width: 1280px;*/
+  margin: 0 auto;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.appWrapper {
+  display: flex;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.leftSidebarBox {
+  width: 200px;
+  background-color: lightgray;
+  transition: 3s;
+}
+
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.topBar {
+  height: 64px;
+  background-color: blue;
+  color: white;
+  display: flex;
+  align-items: center;  
+}
+
+.menuBar {
+  height: 48px;
+  background-color: rgb(249, 249, 249);
+  display: flex;
+  align-items: center;
+  padding-left: 16px;  
+  color: black;
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+
+.mainContent {
+  flex: 1;
+}
+
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.sidebar--toggled {
+  display: inline-flex;
+  width: 30%;
+  height: 83vh;
+  top: 0;
+}
+
+.content--toggled {
+  width: 100%;
+  padding: 15px;
+  height: 100vh;
+}
+
+.menu-content {
+  background-color: white;
+  color: black;
+  width: 98%;
+  height: 89vh;
+  padding: 15px;
+  justify-content: center;
+  text-align: middle;
+  transition: .3s;
+}
+
+.menu-toggle {
+  transition: .3s;
+  width: 100%;
+  top: 0;
+}
+
+.menu-toggle button {
+  position: absolute;
+  right: 2% !important;
+}
+
+.sidebar--toggled button {
+  right: 21% !important;
+  position: absolute;
+}
+
+.sidebarToggleIcon {
+  position: absolute;
+  right: 0;
+  margin-right: 700px;
+}

@@ -1,0 +1,58 @@
+.hideSpinner {
+  display: 'none';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 400;
+  transform: translate(-50%, -50%);
+}
+
+.showSpinner {
+  display: 'block';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 400;
+  transform: translate(-50%, -50%);
+}
+
+.card-spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .card {
+    width: 90%;
+    height: 90%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .flash-animation {
+    position: absolute;
+    text-justify: center;
+    width: 100%;
+    height: 100%;
+    background-color: #bcbcbc;
+    opacity: 0;
+    animation: flash 3s linear infinite;
+  }
+  
+  @keyframes flash {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  
