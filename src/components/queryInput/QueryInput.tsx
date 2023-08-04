@@ -51,7 +51,7 @@ async function handleQuery() {
     .then((response) => response.json())
     .then((data) => {
 
-
+      console.log('result: ', data[0]);
       const chatRequest = {
         id: id,
         query: data.query,
@@ -66,18 +66,6 @@ async function handleQuery() {
     .catch((err) => {
         console.log(err.message);
     });
-
-    const chatRequest = {
-      id: id,
-      query: prompt,
-      response: "Hello there",
-      start: 0,
-      end: 1,
-      score: 0.0321
-    }
-
-    addToChatHistory(chatRequest);
-
   }
   };
 

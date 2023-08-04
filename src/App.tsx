@@ -2,11 +2,13 @@
 import { useState } from 'react';
 import classNames from 'classnames';
 import './App.css';
-import SelectedListItem from './components/listGroup/ListGroup';
+import DeleteIcon from '@mui/icons-material/Delete';
+// import SelectedListItem from './components/listGroup/ListGroup';
 import ChatWindow from './components/chatWindow/ChatWindow';
 import Box from '@mui/material/Box';
 import Switch from '@mui/material/Switch';
 import IconButton from '@mui/material/IconButton';
+import Button from '@mui/material/Button';
 import {ArrowBackIos, ArrowForwardIos} from '@mui/icons-material';
 import MetaSidebar, { MetaData} from './components/metaSidebar/MetaSidebar';
 import {ChartElement} from './components/countChart/CountChart';
@@ -99,10 +101,10 @@ export default function App() {
       <ChartDataProvider>
         <Box id="appBox" className={"appWrapper"}>
           {/* Left Sidebar */}
-          <Box className={"leftSidebarBox"}>
+          {/*<Box className={"leftSidebarBox"}>*/}
             {/* Content */}
-            <SelectedListItem items={items} onSelectItem={handleSelectedItem}/>
-          </Box>
+            {/*<SelectedListItem items={items} onSelectItem={handleSelectedItem}/>*/}
+          {/*<Box>*/}
     
           {/* Main Content */}
           <Box className={"mainContent"}>
@@ -126,6 +128,11 @@ export default function App() {
                     
                   />
                   <span>Chat</span>
+                </div>
+                <div id="clearButton" className="clearButton">
+                <Button variant="outlined" startIcon={<DeleteIcon />} onClick={cleanFileStorage}>
+                  Verwerfen
+                </Button>
                 </div>
             </Box>
     

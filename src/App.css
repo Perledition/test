@@ -113,6 +113,7 @@
 .menu-toggle button {
   position: absolute;
   right: 2% !important;
+  z-index: 200;
 }
 
 .sidebar--toggled button {
@@ -124,4 +125,9 @@
   position: absolute;
   right: 0;
   margin-right: 700px;
+}
+
+.clearButton {
+  position: absolute;
+  left: 280px;
 }

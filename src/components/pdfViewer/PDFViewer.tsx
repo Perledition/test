@@ -36,8 +36,9 @@ async function sendFileAndSaveResponse(file: File) {
     reader.readAsDataURL(file);
     reader.onloadend = async function () {
       const base64Data = reader.result?.toString().split(',')[1];
+      // const body = JSON.stringify({ file: `data:${file.type};base64,${base64Data}` });
       const body = JSON.stringify({ file: `data:${file.type};base64,${base64Data}` });
-
+      console.log(body)
       await fetch("https://apps.beam.cloud/q34u4", {
         method: "POST",
         headers: {

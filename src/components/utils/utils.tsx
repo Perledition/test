@@ -9,6 +9,7 @@ export interface chatRequest {
 }
 
 export function addToChatHistory(entry: chatRequest) {
+    console.log("chatHistory: ", entry)
     const chatHistoryString = localStorage.getItem("chatHistory") || '[]';
     let chatHistory: chatRequest[] = JSON.parse(chatHistoryString) || [];
 
