@@ -55,7 +55,7 @@ async function handleQuery() {
       const chatRequest = {
         id: id,
         query: data.query,
-        response: data.response,
+        response: data.response[0],
         start: data.start,
         end: data.end,
         score: data.end
