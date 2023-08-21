@@ -56,9 +56,9 @@ async function handleQuery() {
         id: id,
         query: data.query,
         response: data.response[0],
-        start: data.start,
-        end: data.end,
-        score: data.end
+        start: 0,
+        end: 0,
+        score: 0
       }
 
       addToChatHistory(chatRequest);
