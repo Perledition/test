@@ -112,7 +112,7 @@ export default function App() {
             {/* Top Bar */}
             <Box className={"topBar"}>
               {/* Top Bar Content */}
-              <TopBar title="Berichtanalyse"/>
+              <TopBar title="Berichtanalyse1"/>
             </Box>
     
             {/* Menu Bar */}
